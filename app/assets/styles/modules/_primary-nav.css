@@ -1,0 +1,45 @@
+.primary-nav {
+  &--white {
+    color: $mainWhite;
+  }
+  &--orange {
+    color: $mainOrange;
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+    @mixin atLarge {
+      flex-direction: row;
+      padding-bottom: 0;
+    }
+  }
+  li {
+    list-style: none;
+    float: left;
+    @mixin atLarge {
+      padding-right: 20px;
+    }
+  }
+  a {
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    line-height: 1.8rem;
+    transition: 0.3s;
+    &:hover {
+      color: $mainOrange;
+    }
+    @mixin atMedium {
+      font-size: 1.5rem;
+      line-height: 2.2rem;
+    }
+    @mixin atLarge {
+      line-height: normal;
+    }
+    .white {
+      color: white;
+    }
+  }
+}

@@ -1,0 +1,181 @@
+.main-section {
+  position: relative;
+  color: $mainWhite;
+  border-bottom: 10px solid $mainDark;
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @mixin atMedium {
+      flex-direction: row;
+    }
+  }
+  &--border {
+    border-bottom: 2px solid rgba($mainRed, 0.5);
+    padding: 10px 0;
+    @mixin atMedium {
+      border-bottom: 0;
+      padding: 0;
+    }
+  }
+  &__article {
+    width: 100%;
+    @mixin atLarge {
+      width: 48%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  &__title {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+    h2 {
+      border-bottom: 2px solid rgba($mainWhite, 0.3);
+      font-family: $specialFont;
+      text-transform: uppercase;
+      font-size: 1.1rem;
+      font-weight: 300;
+    }
+    @mixin atSmall {
+      h2 {
+        font-size: 1.4rem;
+      }
+    }
+
+    @mixin atLarge {
+      padding-bottom: 30px;
+      h2 {
+        font-size: 2.3rem;
+      }
+    }
+  }
+  &__article-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba($mainWhite, 0.3);
+    width: 100%;
+    @mixin atMedium {
+      width: 95%;
+    }
+    @mixin atLarge {
+      width: 100%;
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+    }
+  }
+
+  &__circle {
+    display: flex;
+    flex-direction: column;
+
+    width: 40px;
+    height: 40px;
+    border: 2px solid $mainRed;
+    border-radius: 50%;
+    text-align: center;
+    justify-content: center;
+    @mixin atSmall {
+      width: 50px;
+      height: 50px;
+    }
+    @mixin atMedium {
+      width: 65px;
+      height: 65px;
+    }
+    @mixin atLarge {
+      width: 100px;
+      height: 100px;
+    }
+  }
+  &__date {
+    font-size: 0.6rem;
+    line-height: 1rem;
+    @mixin atSmall {
+      font-size: 0.8rem;
+      line-height: 1.2rem;
+    }
+    @mixin atMedium {
+      font-size: 1rem;
+      line-height: 1.4rem;
+    }
+    @mixin atLarge {
+      font-size: 1.2rem;
+      line-height: 1.8rem;
+    }
+  }
+  &__text-content {
+    width: 85%;
+    margin: 5px 0 5px 0;
+    h3 {
+      font-weight: 300;
+      font-size: 1rem;
+      margin-bottom: 5px;
+    }
+    a {
+      text-decoration: none;
+      color: $mainWhite;
+    }
+    a:hover {
+      color: $mainOrange;
+    }
+    p {
+      text-align: justify;
+      font-size: 0.6rem;
+      font-weight: 100;
+    }
+    @mixin atSmall {
+      h3 {
+        font-size: 1.2rem;
+      }
+    }
+    @mixin atMedium {
+      flex-basis: 75%;
+      margin: 10px 0;
+      h3 {
+        font-size: 1.5rem;
+      }
+
+      p {
+        font-size: 0.7rem;
+      }
+    }
+    @mixin atLarge {
+      flex-basis: 80%;
+      h3 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+      }
+    }
+  }
+  &__btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    @mixin atMedium {
+      margin-top: 15px;
+    }
+    @mixin atLarge {
+      margin-top: 40px;
+    }
+  }
+  &__acronym {
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    @mixin atMedium {
+      font-size: 2.5rem;
+    }
+  }
+}
