@@ -17,6 +17,7 @@
   li {
     list-style: none;
     float: left;
+    transition: all 0.4s ease-out;
     @mixin atLarge {
       padding-right: 20px;
     }
@@ -40,6 +41,13 @@
     }
     .white {
       color: white;
+    }
+  }
+  &--scroll-small {
+    @mixin atLarge {
+      li {
+        transform: scale(0.85);
+      }
     }
   }
 }

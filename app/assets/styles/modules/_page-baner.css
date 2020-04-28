@@ -1,11 +1,7 @@
-.welcome-section {
+.page-baner {
   position: relative;
   border-bottom: 10px solid $mainDark;
-
-  background-color: black;
-
   font-family: $specialFont;
-  text-transform: uppercase;
   color: $mainWhite;
   z-index: 2;
 
@@ -22,11 +18,20 @@
     text-align: center;
   }
   &__title {
+    width: 100%;
     margin-bottom: 30px;
     font-weight: 400;
     font-size: 2.8rem;
     letter-spacing: 5px;
     text-transform: uppercase;
+    &-subpage {
+      margin: 50px 0 20px 0;
+      text-transform: none;
+      text-align: center;
+      letter-spacing: 2px;
+      font-size: 2rem;
+    }
+
     @mixin atSmall {
       margin-bottom: 20px;
       font-size: 3.6rem;
@@ -35,12 +40,19 @@
       margin-bottom: 40px;
       font-size: 6rem;
       letter-spacing: 10px;
+      &-subpage {
+        margin: 50px 0 20px 0;
+        text-align: left;
+        letter-spacing: 5px;
+        font-size: 5rem;
+      }
     }
   }
   &__subtitle {
     margin: 0 0 30px 0;
     font-weight: 300;
     font-size: 1.2rem;
+    text-transform: uppercase;
     @mixin atSmall {
       margin-bottom: 30px;
       font-size: 2rem;
@@ -62,6 +74,10 @@
       font-size: 2.5rem;
       padding-bottom: 60px;
       letter-spacing: 2px;
+      &-subpage {
+        text-align: left;
+        padding-bottom: 0;
+      }
     }
   }
 }

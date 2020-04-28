@@ -1,0 +1,88 @@
+.subpage-section {
+  padding: 0 10px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  z-index: 2;
+  @mixin atLarge {
+    padding: 10px 20px;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    background-color: $mainWhite;
+    @mixin atSmall {
+      max-width: 640px;
+    }
+    @mixin atMedium {
+      max-width: 960px;
+    }
+    @mixin atLarge {
+      max-width: 1440px;
+    }
+  }
+  &__main-content {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+    @mixin atSmall {
+      max-width: 480px;
+    }
+    @mixin atMedium {
+      margin: 60px 20px;
+      display: block;
+      max-width: 640px;
+    }
+    @mixin atLarge {
+      max-width: 1200px;
+    }
+  }
+  &__links-content {
+    width: 100%;
+    margin-bottom: 20px;
+    margin-left: 0;
+
+    @mixin atMedium {
+      width: 45%;
+      margin-left: 20px;
+      text-align: justify;
+      float: right;
+    }
+    @mixin atLarge {
+      width: 30%;
+      margin-bottom: 30px;
+    }
+  }
+  &__text-content {
+    width: 100%;
+    h4 {
+      font-size: 1.5rem;
+      font-weight: 300;
+      margin-bottom: 10px;
+      text-align: center;
+      line-height: 2.2rem;
+      @mixin atLarge {
+        margin-bottom: 20px;
+        font-size: 2rem;
+      }
+    }
+    p {
+      text-indent: 3rem;
+      font-size: 0.9rem;
+      line-height: 1rem;
+      line-height: 1.3rem;
+      text-align: justify;
+      margin-bottom: 10px;
+      @mixin atLarge {
+        font-size: 1.2rem;
+        line-height: 1.6rem;
+      }
+    }
+  }
+  &__container-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
