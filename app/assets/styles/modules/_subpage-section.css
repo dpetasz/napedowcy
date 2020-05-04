@@ -1,15 +1,14 @@
 .subpage-section {
-  padding: 0 10px;
+  padding: 20px 0;
   background-size: 100% 100%;
   background-repeat: no-repeat;
   z-index: 2;
   @mixin atLarge {
-    padding: 10px 20px;
+    padding: 60px 20px;
   }
 
   &__container {
     display: flex;
-    padding: 20px 0;
     flex-direction: column;
     align-items: center;
 
@@ -29,14 +28,14 @@
   &__main-content {
     display: flex;
     flex-direction: column;
-    margin: 20px 0;
+
+    padding: 20px 10px;
     background-color: $mainWhite;
     @mixin atSmall {
       max-width: 480px;
     }
     @mixin atMedium {
-      margin: 60px 20px;
-      padding: 80px 80px 60px 80px;
+      padding: 50px 60px;
       display: block;
       max-width: 640px;
     }
@@ -46,7 +45,7 @@
   }
   &__links-content {
     width: 80%;
-    margin: 20px auto;
+    margin: 0 auto;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 10px 8px 8px -1px rgba($mainDark, 0.87);
@@ -56,13 +55,12 @@
 
     @mixin atMedium {
       width: 45%;
-      margin-left: 20px;
+      margin: 0 0 10px 20px;
       text-align: justify;
       float: right;
     }
     @mixin atLarge {
       width: 30%;
-      margin-bottom: 30px;
     }
   }
   &__container-items {
@@ -73,18 +71,13 @@
   }
   &__text-content {
     width: 100%;
-    padding: 0 20px;
-    @mixin atMedium {
-      padding: 0;
-    }
     h3 {
       font-size: 1.5rem;
       font-weight: 300;
-      margin-bottom: 10px;
+      margin: 20px 0;
       text-align: center;
       line-height: 2.2rem;
       @mixin atLarge {
-        margin-bottom: 20px;
         font-size: 2rem;
       }
     }
