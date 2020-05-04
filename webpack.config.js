@@ -82,8 +82,8 @@ if (currentTask == "build") {
   cssConfig.use.unshift(MiniCssExtractPlugin.loader);
   postCSSPlugins.push(require("cssnano"));
   config.output = {
-    filename: "[name].[chunkhash:4].js",
-    chunkFilename: "[name].[chunkhash:4].js",
+    filename: "[name].[contenthash:4].js",
+    chunkFilename: "[name].[contenthash:4].js",
     path: path.resolve(__dirname, "dist"),
   };
   config.mode = "production";
@@ -92,7 +92,7 @@ if (currentTask == "build") {
   };
   config.plugins.push(
     new CleanWebpackPlugin(),
-    new MiniCssExtractPlugin({ filename: "styles.[chunkhash:4].css" }),
+    new MiniCssExtractPlugin({ filename: "styles.[contenthash:4].css" }),
     new RunAfterCompile()
   );
 }

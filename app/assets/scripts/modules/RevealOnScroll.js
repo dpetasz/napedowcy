@@ -31,6 +31,7 @@ class RevealOnScroll {
       if (scrollPercent < this.tresholdPercent) {
         el.classList.add("reveal-item--is-visible");
         el.isRevealed = true;
+
         if (el.isLastItem) {
           window.removeEventListener("scroll", this.scrollThrottle);
         }

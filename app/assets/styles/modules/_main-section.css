@@ -1,24 +1,30 @@
 .main-section {
-  position: relative;
-  color: $mainWhite;
   border-bottom: 10px solid $mainDark;
-
-  &__list {
+  padding: 20px 0;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  @mixin atSmall {
+    padding: 20px 20px;
+  }
+  @mixin atMedium {
+    padding: 40px 0;
+  }
+  @mixin atLarge {
+    padding: 60px 0;
+  }
+  &__container {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    position: absolute;
-    width: 100%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     @mixin atMedium {
+      max-width: 1200px;
       flex-direction: row;
+      justify-content: space-between;
     }
   }
   &--border {
     border-bottom: 2px solid rgba($mainRed, 0.5);
-    padding: 10px 0;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
     @mixin atMedium {
       border-bottom: 0;
       padding: 0;
@@ -32,14 +38,18 @@
       flex-direction: column;
       align-items: center;
     }
+    &-devices {
+      width: 100%;
+    }
   }
   &__title {
     display: flex;
     justify-content: center;
-    margin-top: 5px;
+    margin-bottom: 10px;
     h2 {
       border-bottom: 2px solid rgba($mainWhite, 0.3);
       font-family: $specialFont;
+      color: $mainWhite;
       text-transform: uppercase;
       font-size: 1.1rem;
       font-weight: 300;
@@ -51,134 +61,56 @@
     }
 
     @mixin atLarge {
-      padding-bottom: 30px;
+      padding-bottom: 0px;
       h2 {
         font-size: 2.3rem;
       }
     }
   }
-  &__article-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid rgba($mainWhite, 0.3);
-    width: 100%;
-    @mixin atMedium {
-      width: 95%;
-    }
-    @mixin atLarge {
-      width: 100%;
-      margin-bottom: 20px;
-      padding-bottom: 20px;
-    }
-  }
 
-  &__circle {
-    display: flex;
-    flex-direction: column;
-
-    width: 40px;
-    height: 40px;
-    border: 2px solid $mainRed;
-    border-radius: 50%;
-    text-align: center;
-    justify-content: center;
-    @mixin atSmall {
-      width: 50px;
-      height: 50px;
-    }
-    @mixin atMedium {
-      width: 65px;
-      height: 65px;
-    }
-    @mixin atLarge {
-      width: 100px;
-      height: 100px;
-    }
-  }
-  &__date {
-    font-size: 0.6rem;
-    line-height: 1rem;
-    @mixin atSmall {
-      font-size: 0.8rem;
-      line-height: 1.2rem;
-    }
-    @mixin atMedium {
-      font-size: 1rem;
-      line-height: 1.4rem;
-    }
-    @mixin atLarge {
-      font-size: 1.2rem;
-      line-height: 1.8rem;
-    }
-  }
-  &__text-content {
-    width: 85%;
-    margin: 5px 0 5px 0;
-    h3 {
-      font-weight: 300;
-      font-size: 1rem;
-      margin-bottom: 5px;
-    }
-    a {
-      text-decoration: none;
-      color: $mainWhite;
-    }
-    a:hover {
-      color: $mainOrange;
-    }
-    p {
-      text-align: justify;
-      font-size: 0.6rem;
-      font-weight: 100;
-    }
-    @mixin atSmall {
-      h3 {
-        font-size: 1.2rem;
-      }
-      p {
-        line-height: 0.85rem;
-      }
-    }
-    @mixin atMedium {
-      flex-basis: 75%;
-      margin: 10px 0;
-      h3 {
-        font-size: 1.5rem;
-      }
-
-      p {
-        font-size: 0.7rem;
-      }
-    }
-    @mixin atLarge {
-      flex-basis: 80%;
-      h3 {
-        font-size: 2rem;
-      }
-
-      p {
-        font-size: 1.2rem;
-        line-height: 1.5rem;
-      }
-    }
-  }
   &__btn {
     display: flex;
     justify-content: center;
-    margin-top: 10px;
+    margin-top: 20px;
     @mixin atMedium {
       margin-top: 15px;
     }
     @mixin atLarge {
-      margin-top: 40px;
+      margin-top: 60px;
     }
   }
-  &__acronym {
-    text-transform: uppercase;
-    font-size: 1.7rem;
+  &__pagination {
+    width: 100%;
+    margin-top: 20px;
+    li {
+      display: inline-block;
+      list-style: none;
+      transition: 0.3s;
+      cursor: pointer;
+      a {
+        text-decoration: none;
+        line-height: 0;
+        margin: 6px;
+        font-size: 1rem;
+        font-weight: 400;
+      }
+      &:hover {
+        background-color: $mainOrange;
+        a {
+          color: $mainWhite;
+        }
+      }
+    }
     @mixin atMedium {
-      font-size: 2.5rem;
+      a {
+        font-size: 1.2rem;
+      }
+    }
+  }
+  &__pagination-active {
+    background-color: $mainOrange;
+    a {
+      color: $mainWhite;
     }
   }
 }

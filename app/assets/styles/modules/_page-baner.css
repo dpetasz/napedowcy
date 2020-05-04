@@ -4,9 +4,13 @@
   font-family: $specialFont;
   color: $mainWhite;
   z-index: 2;
+  &-subpage {
+    text-align: left;
+    padding-bottom: 0;
+  }
 
   &__image {
-    filter: brightness(0.5);
+    filter: brightness(0.5) blur(3px);
   }
 
   &__text-content {
@@ -53,6 +57,11 @@
     font-weight: 300;
     font-size: 1.2rem;
     text-transform: uppercase;
+    &-subpage {
+      font-size: 1.4rem;
+      text-align: center;
+      line-height: 0;
+    }
     @mixin atSmall {
       margin-bottom: 30px;
       font-size: 2rem;
@@ -60,12 +69,23 @@
     @mixin atLarge {
       font-size: 4rem;
       letter-spacing: 3px;
+      &-subpage {
+        line-height: 1.8rem;
+        font-size: 3rem;
+        text-align: left;
+      }
     }
   }
   &__description {
     font-weight: 100;
     font-size: 1rem;
     padding-bottom: 30px;
+    &-performance {
+      text-align: center;
+      font-size: 1rem;
+      line-height: 1.5rem;
+    }
+
     @mixin atSmall {
       font-size: 1.6rem;
       padding-bottom: 20px;
@@ -77,6 +97,11 @@
       &-subpage {
         text-align: left;
         padding-bottom: 0;
+      }
+      &-performance {
+        text-align: left;
+        font-size: 1.8rem;
+        line-height: 2.6rem;
       }
     }
   }
