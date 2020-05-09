@@ -2,7 +2,11 @@ import "../styles/styles.css";
 import MobileMenu from "./modules/MobileMenu";
 import RevealOnScroll from "./modules/RevealOnScroll";
 import StickyHeader from "./modules/StickyHeader";
+// import Slider from "./modules/Slider";
+import SliderOnScroll from "./modules/SliderOnScroll";
 
+// let slider = new Slider();
+let sliderOnScroll = new SliderOnScroll(90);
 let stickyHeader = new StickyHeader(80);
 let mobileMenu = new MobileMenu();
 

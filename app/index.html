@@ -11,7 +11,7 @@
   </head>
 
   <body>
-    <div class="site-header">
+    <section class="site-header">
       <div class="site-header__main-content wrapper">
         <div class="site-header__logo">
           <img src="assets/images/icons/Logo-Nap.svg" />
@@ -41,9 +41,9 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="page-baner">
+    <section class="page-baner">
       <picture>
         <source
           srcset="assets/images/stage--high.jpg"
@@ -79,7 +79,7 @@
           </p>
         </div>
       </div>
-    </div>
+    </section>
 
     <div
       class="main-section"
@@ -185,45 +185,93 @@
         </div>
       </div>
     </div>
-    <div class="site-slider">
-      <picture>
-        <source
-          srcset="assets/images/TW--high.jpg"
-          media="(min-width: 1981px)"
-        />
-        <source
-          srcset="assets/images/TW--large.jpg"
-          media="(min-width: 1441px)"
-        />
-        <source
-          srcset="assets/images/TW--medium.jpg"
-          media="(min-width: 640px)"
-        />
-        <source
-          srcset="assets/images/TW--small.jpg"
-          media="(min-width: 480px)"
-        />
-        <img
-          src="assets/images/TW--smaller.jpg"
-          alt="welcome"
-          class="site-slider__image"
-        />
-      </picture>
-      <div class="site-slider__content wrapper">
-        <div class="site-slider__text-content scroll">
-          <h2 class="site-slider__title">teatr wielki</h2>
-          <h3 class="site-slider__subtitle">
-            poznaj historię techniki teatralnej
-          </h3>
+    <section class="site-slider" data-slider>
+      <div class="site-slider__btn-container wrapper">
+        <div
+          class="site-slider__btn site-slider__btn--prev"
+          data-btn-prev
+        ></div>
+        <div
+          class="site-slider__btn site-slider__btn--next"
+          data-btn-next
+        ></div>
+      </div>
+      <div
+        class="site-slider__slide"
+        style="background-image: url(assets/images/TW--large.jpg);"
+        data-slide
+      >
+        <div class="site-slider__content wrapper">
+          <div class="site-slider__text-content scroll">
+            <h2 class="site-slider__title">teatr wielki</h2>
+            <h3 class="site-slider__subtitle">
+              poznaj historię techniki teatralnej
+            </h3>
 
-          <p>
-            <a href="#" class="btn">czytaj więcej</a>
-          </p>
+            <p>
+              <a href="#" class="btn">czytaj więcej</a>
+            </p>
+          </div>
         </div>
       </div>
-    </div>
+      <div
+        class="site-slider__slide"
+        style="background-image: url(assets/images/pod-zapadniami-1.jpg);"
+        data-slide
+      >
+        <div class="site-slider__content wrapper">
+          <div class="site-slider__text-content scroll">
+            <h2 class="site-slider__title">teatr wielki</h2>
+            <h3 class="site-slider__subtitle">
+              poznaj co kryje się pod zapadniami
+            </h3>
 
-    <div class="site-footer">
+            <p>
+              <a href="#" class="btn">czytaj więcej</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="site-slider__slide"
+        style="background-image: url(assets/images/pod-zapadniami-2.jpg);"
+        data-slide
+      >
+        <div class="site-slider__content wrapper">
+          <div class="site-slider__text-content scroll">
+            <h2 class="site-slider__title">teatr wielki</h2>
+            <h3 class="site-slider__subtitle">
+              poznaj więcej urządzeń sceniacznych
+            </h3>
+
+            <p>
+              <a href="#" class="btn">czytaj więcej</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="site-slider__slide"
+        style="background-image: url(assets/images/pod-zapadniami-3.jpg);"
+        data-slide
+      >
+        <div class="site-slider__content wrapper">
+          <div class="site-slider__text-content scroll">
+            <h2 class="site-slider__title">teatr wielki</h2>
+            <h3 class="site-slider__subtitle">
+              odkryj wiele tajników zaplecza sceny
+            </h3>
+
+            <p>
+              <a href="#" class="btn">czytaj więcej</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="site-slider__dots-container" data-dots-container></div>
+    </section>
+
+    <section class="site-footer">
       <div class="site-footer__container wrapper">
         <div class="site-footer__main">
           <div class="site-footer__logo">
@@ -259,6 +307,6 @@
           </p>
         </div>
       </div>
-    </div>
+    </section>
   </body>
 </html>
