@@ -1,5 +1,5 @@
 .subpage-section {
-  padding: 20px 0;
+  padding: 24px 10px;
   background-size: 100% 100%;
   background-repeat: no-repeat;
   z-index: 2;
@@ -11,6 +11,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 60px 10px 30px 10px;
+    background-color: $mainWhite;
 
     @mixin atSmall {
       max-width: 640px;
@@ -21,26 +23,22 @@
       justify-content: center;
     }
     @mixin atLarge {
-      max-width: 1440px;
+      margin: auto;
+      max-width: 1200px;
     }
   }
 
   &__main-content {
-    display: flex;
-    flex-direction: column;
-
-    padding: 20px 10px;
-    background-color: $mainWhite;
+    position: relative;
     @mixin atSmall {
       max-width: 480px;
     }
     @mixin atMedium {
-      padding: 50px 60px;
-      display: block;
+      margin: 0 20px;
       max-width: 640px;
     }
     @mixin atLarge {
-      max-width: 1200px;
+      max-width: 960px;
     }
   }
   &__links-content {
@@ -77,6 +75,9 @@
       margin: 20px 0;
       text-align: center;
       line-height: 2.2rem;
+      @mixin atMedium {
+        margin-top: 0;
+      }
       @mixin atLarge {
         font-size: 2rem;
       }

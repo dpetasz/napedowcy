@@ -1,9 +1,12 @@
 .testimonial {
   width: 100%;
   margin: 20px;
-  @mixin atLarge {
-    width: 30%;
+  @mixin atMedium {
+    width: 48%;
     margin: 20px 0;
+  }
+  @mixin atLarge {
+    width: 31%;
   }
   &__photo {
     position: relative;
