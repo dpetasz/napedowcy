@@ -33,10 +33,11 @@
       color: $mainOrange;
     }
     @mixin atMedium {
-      font-size: 1.5rem;
+      font-size: 1.2rem;
       line-height: 2.2rem;
     }
     @mixin atLarge {
+      font-size: 1.5rem;
       line-height: normal;
     }
     .white {

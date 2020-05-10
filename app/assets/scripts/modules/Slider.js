@@ -19,23 +19,25 @@ class Slider {
   }
 
   initSlider() {
-    this.slides[this.slideIndex].style.opacity = 1;
-    for (let i = 0; i < this.slides.length; i++) {
-      let dot = document.createElement("div");
-      dot.classList.add("site-slider__dots");
-      this.dotsContainer.append(dot);
-      this.dots.push(dot);
+    if (this.slides.length > 1) {
+      this.slides[this.slideIndex].style.opacity = 1;
+      for (let i = 0; i < this.slides.length; i++) {
+        let dot = document.createElement("div");
+        dot.classList.add("site-slider__dots");
+        this.dotsContainer.append(dot);
+        this.dots.push(dot);
+      }
+      this.dots[this.slideIndex].classList.add("site-slider__dots--active");
+      this.dots.forEach((dot, index) => {
+        dot.addEventListener("click", () => this.changeSlider(index));
+      });
+      this.btnPrev.addEventListener("click", () =>
+        this.changeSlider(this.slideIndex - 1)
+      );
+      this.btnNext.addEventListener("click", () =>
+        this.changeSlider(this.slideIndex + 1)
+      );
     }
-    this.dots[this.slideIndex].classList.add("site-slider__dots--active");
-    this.dots.forEach((dot, index) => {
-      dot.addEventListener("click", () => this.changeSlider(index));
-    });
-    this.btnPrev.addEventListener("click", () =>
-      this.changeSlider(this.slideIndex - 1)
-    );
-    this.btnNext.addEventListener("click", () =>
-      this.changeSlider(this.slideIndex + 1)
-    );
   }
 
   changeSlider(index) {

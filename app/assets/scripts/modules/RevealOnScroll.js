@@ -40,11 +40,13 @@ class RevealOnScroll {
   }
 
   hideInitially() {
-    this.itemsToReveal.forEach((el) => {
-      el.classList.add("reveal-item");
-      el.isRevealed = false;
-    });
-    this.itemsToReveal[this.itemsToReveal.length - 1].isLastItem = true;
+    if (this.itemsToReveal.length > 1) {
+      this.itemsToReveal.forEach((el) => {
+        el.classList.add("reveal-item");
+        el.isRevealed = false;
+      });
+      this.itemsToReveal[this.itemsToReveal.length - 1].isLastItem = true;
+    }
   }
 }
 
